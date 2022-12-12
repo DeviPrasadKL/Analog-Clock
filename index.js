@@ -11,6 +11,12 @@ setInterval(() => {
     hour.style.transform = `rotate(${hr}deg)`
     min.style.transform = `rotate(${mr}deg)`
     sec.style.transform = `rotate(${sr}deg)`
+    
+ // DIgital TIme
+    let digitalTime = document.getElementById("digitalTime");
+    digitalTime.innerHTML = `${htime}:${mtime}:${stime}`;
+    
+//     Date
 
     let day = d.getDate();
     let month = d.getMonth();
