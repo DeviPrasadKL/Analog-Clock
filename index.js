@@ -18,7 +18,7 @@ setInterval(() => {
     let fullday = d.getDay();
 
     let h2 = document.getElementById("fullDate");
-    h2.innerHTML = `${day}/${month}/${year}`;
+    h2.innerHTML = `${day}/${month+1}/${year}`;
 
     let h3 = document.getElementById("fullDay");
     let key = fullday;
