@@ -14,7 +14,12 @@ setInterval(() => {
     
  // DIgital TIme
     let digitalTime = document.getElementById("digitalTime");
-    digitalTime.innerHTML = `${htime}:${mtime}:${stime}`;
+    let meridian = "AM";
+    if (htime>12){
+        htime -= 12;
+        meridian= "PM";
+    }
+    digitalTime.innerHTML = `${htime}:${mtime}:${stime}  ${meridian}`;
     
 //     Date
 
