@@ -15,20 +15,20 @@
 #hour{
     width: 1%;
     height: 18.5%;
-    top: 31.4%;
+    top: 31.9%;
     left: 49.45%;
 }
 #min{
     width: 1%;
     height: 26%;
-    top: 25.2%;
+    top: 24.6%;
     left: 49.4%;
     /* display: none; */
 }
 #sec{
     width: 1%;
     height: 34%;
-    top: 16%;
+    top: 16.4%;
     left: 49.45%;
     /* display: none; */
 }
