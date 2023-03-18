@@ -11,25 +11,38 @@ setInterval(() => {
     hour.style.transform = `rotate(${hr}deg)`
     min.style.transform = `rotate(${mr}deg)`
     sec.style.transform = `rotate(${sr}deg)`
-    
- // DIgital TIme
-    let digitalTime = document.getElementById("digitalTime");
-    let meridian = "AM";
-    if (htime>12){
-        htime -= 12;
-        meridian= "PM";
-    }
-    digitalTime.innerHTML = `${htime}:${mtime}:${stime}  ${meridian}`;
-    
-//     Date
 
+    // DIgital TIme
+    let digitalTime = document.getElementById("digitalTime");
+    if(htime>12){
+        htime -= 12;
+    }
+    if(htime<10){
+        htime = `0` + htime;
+    }
+    if(mtime<10){
+        mtime = `0` + mtime;
+    }
+    if(stime<10){
+        stime = `0` + stime;
+    }
+    digitalTime.innerHTML = `${htime}:${mtime}:${stime}`;
+    
+    // Digitsl Date
     let day = d.getDate();
-    let month = d.getMonth();
+    let month = d.getMonth() +1 ;
     let year = d.getFullYear();
     let fullday = d.getDay();
 
+    if(day<10){
+        day = `0` + day;
+    }
+    if(month<10){
+        month = `0` + month;
+    }
+
     let h2 = document.getElementById("fullDate");
-    h2.innerHTML = `${day}/${month+1}/${year}`;
+    h2.innerHTML = `${day}/${month}/${year}`;
 
     let h3 = document.getElementById("fullDay");
     let key = fullday;
