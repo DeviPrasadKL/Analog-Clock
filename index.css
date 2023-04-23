@@ -11,6 +11,7 @@
     border-radius: 10px;
     transform-origin: bottom;
     background-color: black;
+    transition: all 0.5s ease-in;
 }
 #hour{
     width: 1%;
