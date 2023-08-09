@@ -14,30 +14,30 @@ setInterval(() => {
 
     // DIgital TIme
     let digitalTime = document.getElementById("digitalTime");
-    if(htime>12){
+    if (htime > 12) {
         htime -= 12;
     }
-    if(htime<10){
+    if (htime < 10) {
         htime = `0` + htime;
     }
-    if(mtime<10){
+    if (mtime < 10) {
         mtime = `0` + mtime;
     }
-    if(stime<10){
+    if (stime < 10) {
         stime = `0` + stime;
     }
     digitalTime.innerHTML = `${htime}:${mtime}:${stime}`;
-    
+
     // Digitsl Date
     let day = d.getDate();
-    let month = d.getMonth() +1 ;
+    let month = d.getMonth() + 1;
     let year = d.getFullYear();
     let fullday = d.getDay();
 
-    if(day<10){
+    if (day < 10) {
         day = `0` + day;
     }
-    if(month<10){
+    if (month < 10) {
         month = `0` + month;
     }
 
@@ -45,8 +45,7 @@ setInterval(() => {
     h2.innerHTML = `${day}/${month}/${year}`;
 
     let h3 = document.getElementById("fullDay");
-    let key = fullday;
-    switch (key) {
+    switch (fullday) {
         case 0: h3.innerHTML = `Sunday`
             break;
         case 1: h3.innerHTML = `Monday`
